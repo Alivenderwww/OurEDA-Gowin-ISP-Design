@@ -23,19 +23,17 @@ module isp_top #(
     input wire        ctrl_en,
 
     // 输入线
-    input wire                  in_valid,
-    input wire [DATA_WIDTH-1:0] in_data,   // 数据输入线
-    input wire                  in_fsync,  // 帧同步，在两帧间隔间拉高，标志着一帧的结束和新帧的开始
-    input wire                  in_hsync,  // 行同步，在一行内持续拉高，一行结束后拉低。
+    input  wire                  in_valid,
+    output wire                  out_ready,
+    input  wire [DATA_WIDTH-1:0] in_data,   // 数据输入线
+    input  wire                  in_fsync,  // 帧同步，在两帧间隔间拉高，标志着一帧的结束和新帧的开始
+    input  wire                  in_hsync,  // 行同步，在一行内持续拉高，一行结束后拉低。
 
     // 输出线
     output wire                     out_valid,
+    input  wire                     in_ready,
     output wire [3*COLOR_DEPTH-1:0] out_data,  // 数据输出线
-    output wire [7:0]               out_user,  //自定义数据线. [0]是hstart标志位, [1]是fstart标志位
-
-    // 准备信号 暂时没用
-    input wire  in_ready,
-    output wire out_ready
+    output wire [7:0]               out_user   //自定义数据线. [0]是hstart标志位, [1]是fstart标志位
 );
 
 wire [DATA_WIDTH-1:0]  DPC_data;
