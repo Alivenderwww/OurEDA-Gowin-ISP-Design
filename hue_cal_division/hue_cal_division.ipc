@@ -1,0 +1,17 @@
+[General]
+ipc_version=4
+file=hue_cal_division
+module=Hue_Cal_Division
+target_device=gw5ast138b-002
+type=integer_division
+version=1.0
+
+[Config]
+DATA_TYPE=0
+DIVIDEND_DATA_WIDTH=17
+DIVISOR_DATA_WIDTH=11
+FRACTIONAL_DATA_WIDTH=1
+LANG=0
+LATENCY=5
+REMAINDER=without
+Synthesis_tool=GowinSynthesis
