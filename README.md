@@ -1,8 +1,12 @@
 # 2024年FPGA创新创业竞赛 Gowin ISP设计源代码
 
-OurEDA
+**OurEDA**
+
+![架构图](/asstes/image1.png)
 
 上位机即软件部分在这里：[here](https://github.com/Alivenderwww/OurEDA-Gowin-ISP-Software-Deigin)
+
+[视频链接](https://www.bilibili.com/video/BV1ByCNY8EPC)
 
 ！！！部分使用了Gowin的Bram、Dram、Div等IP核，移植注意。
 
